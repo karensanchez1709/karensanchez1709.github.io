@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de registro</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #F5F5F5;
+      color: #2E7D32;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #FFFFFF;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2E7D32;
+    }
+
+    .checklist-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px;
+      border-bottom: 1px solid #E0E0E0;
+    }
+
+    label {
+      flex: 1;
+      margin-left: 10px;
+    }
+
+    input[type="checkbox"] {
+      accent-color: #66BB6A;
+      transform: scale(1.4);
+    }
+
+    .btn-finish {
+      width: 100%;
+      margin-top: 20px;
+      padding: 12px;
+      border: none;
+      background-color: #66BB6A;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-finish:hover {
+      background-color: #2E7D32;
+    }
+.circulo {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+border: 10px solid whitesomoke;
+}
+imgder {
+float: right;
+}
+  
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+	<img src="img/logo.png" width="40" height="30" class="circulo" >  
+    <h2>Formulario de registro 🐾</h2>
+
+    <div class="checklist-item">
+      <label for="name">Nombre y apellido:</label>
+      <input type="text" id="name" name="user_name" />
+    </div>
+
+    <div class="checklist-item">
+      <label for="name">Crea tu usuario:</label>
+      <input type="text" id="user" name="user_user" />
+
+    </div>
+
+    <div class="checklist-item">
+        <label for="name">Password:</label>
+      <input type="password" id="pass" name="user_pass" />
+
+    </div>
+
+    <div class="checklist-item">
+      <label for="name">Nombre Mascota:</label>
+      <input type="text" id="pass" name="user_pass" />
+    </div>
+    <div class="checklist-item">
+      <label for="name">Especie:</label>
+        <select id="especie" name="especie">
+            <option value="opcion1">Perro</option>
+            <option value="opcion2">Gato</option>
+        </select>
+	
+    </div>
+    <div class="checklist-item">
+      <label for="name">Raza:</label>
+      <input type="text" id="raza" name="raza" />
+    </div>
+    <div class="checklist-item">
+      <label for="name">Edad:</label>
+      <input type="text" id="edad" name="edad" />
+    </div>
+    <div class="checklist-item">
+      <label for="name">Tamaño:</label>
+     <select id="tamano" name="tamano">
+            <option value="opcion1">Pequeño</option>
+            <option value="opcion2">Mediano</option>
+            <option value="opcion2">Grande</option>
+        </select>    
+	</div>
+    <div class="checklist-item">
+      <label for="name">Referencia Alimentación:</label>
+  	   <select id="referencia" name="referencia">
+            <option value="opcion1">Natural</option>
+            <option value="opcion2">Industrial</option>
+            <option value="opcion2">Mixta</option>
+        </select>  
+    </div>
+     <div class="checklist-item">
+      <label for="name">Foto:</label>
+      <input type="file" id="foto" name="foto" />
+    </div>
+  </ul>
+
+
+
+    <button class="btn-finish">Grabar Información</button>
+  </div>
+
+</body>
+</html>

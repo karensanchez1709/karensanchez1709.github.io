@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checklist Diaria - Emerald</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #F5F5F5;
+      color: #2E7D32;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #FFFFFF;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2E7D32;
+    }
+
+    .checklist-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px;
+      border-bottom: 1px solid #E0E0E0;
+    }
+
+    label {
+      flex: 1;
+      margin-left: 10px;
+    }
+
+    input[type="checkbox"] {
+      accent-color: #66BB6A;
+      transform: scale(1.4);
+    }
+
+    .btn-finish {
+      width: 100%;
+      margin-top: 20px;
+      padding: 12px;
+      border: none;
+      background-color: #66BB6A;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-finish:hover {
+      background-color: #2E7D32;
+    }
+.circulo {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+border: 10px solid whitesomoke;
+}
+imgder {
+float: right;
+}
+  
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+	<img src="img/logo.png" width="40" height="30" class="circulo" > 
+    <h2>Checklist Diaria 🐾</h2>
+
+    <div class="checklist-item">
+      <input type="checkbox" id="agua">
+      <label for="agua">Revisar agua limpia</label>
+    </div>
+
+    <div class="checklist-item">
+      <input type="checkbox" id="comida">
+      <label for="comida">Dar porción de comida balanceada</label>
+    </div>
+
+    <div class="checklist-item">
+      <input type="checkbox" id="paseo">
+      <label for="paseo">Paseo o ejercicio mínimo 20 min</label>
+    </div>
+
+    <div class="checklist-item">
+      <input type="checkbox" id="juego">
+      <label for="juego">Tiempo de juego y estimulación</label>
+    </div>
+
+    <div class="checklist-item">
+      <input type="checkbox" id="cepillado">
+      <label for="cepillado">Cepillado de pelaje</label>
+    </div>
+
+    <div class="checklist-item">
+      <input type="checkbox" id="dientes">
+      <label for="dientes">Revisión de dientes</label>
+    </div>
+
+    <div class="checklist-item">
+      <input type="checkbox" id="premio">
+      <label for="premio">Dar premio saludable</label>
+    </div>
+
+    <button class="btn-finish">Checklist Completada</button>
+  </div>
+
+</body>
+</html>

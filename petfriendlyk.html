@@ -1,0 +1,83 @@
+// Mapa interactivo con 19 localidades y recomendaciones pet friendly
+import React, { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
+
+const LOCALIDADES = [
+  "Usaquén", "Chapinero", "Santa Fe", "San Cristóbal", "Usme", "Tunjuelito",
+  "Bosa", "Kennedy", "Fontibón", "Engativá", "Suba", "Barrios Unidos",
+  "Teusaquillo", "Los Mártires", "Antonio Nariño", "Puente Aranda",
+  "La Candelaria", "Rafael Uribe Uribe", "Ciudad Bolívar"
+];
+
+const RECOMENDACIONES = {
+  "Usaquén": [
+    "🌳 Parque de los Novios",
+    "🍽️ Le Coco Café (Calle 119 #5-76)"
+  ],
+  "Chapinero": [
+    "🌳 Parque El Virrey",
+    "🍽️ Capital Bagels"
+  ],
+  "Santa Fe": ["🌳 Parque Nacional Enrique Olaya Herrera"],
+  "San Cristóbal": ["🌳 Parque Metropolitano San Cristóbal"],
+  "Usme": ["🌳 Parque Entrenubes"],
+  "Tunjuelito": ["🌳 Parque El Tunal"],
+  "Bosa": ["🌳 Parque La Esperanza"],
+  "Kennedy": ["🌳 Parque Tímiza"],
+  "Fontibón": ["🌳 Parque La Felicidad"],
+  "Engativá": ["🌳 Parque San Andrés"],
+  "Suba": ["🌳 Parque La Gaitana"],
+  "Barrios Unidos": ["🌳 Parque de los Novios"],
+  "Teusaquillo": ["🌳 Parque Simón Bolívar"],
+  "Los Mártires": ["🌳 Parque Renacimiento"],
+  "Antonio Nariño": ["🌳 Parque Ciudad Montes"],
+  "Puente Aranda": ["🌳 Parque Ecológico Agua Viva"],
+  "La Candelaria": ["🌳 Parque de los Periodistas"],
+  "Rafael Uribe Uribe": ["🌳 Parque El Claret"],
+  "Ciudad Bolívar": ["🌳 Parque Illimani"]
+};
+
+export default function MapaBogotaPetFriendly() {
+  const [seleccionado, setSeleccionado] = useState(null);
+
+  return (
+    <div className="w-full h-screen flex flex-col items-center bg-[#E8F5E9] p-6">
+      <h1 className="text-3xl font-bold text-[#2E7D32] mb-4">Mapa Pet Friendly Bogotá</h1>
+      <div className="grid grid-cols-3 md:grid-cols-4 gap-4">
+        {LOCALIDADES.map((loc) => (
+          <button
+            key={loc}
+            onClick={() => setSeleccionado(loc)}
+            className={`p-2 rounded-xl text-white font-semibold transition duration-300 shadow-md bg-[#66BB6A] hover:bg-[#388E3C] ${
+              seleccionado === loc ? "ring-4 ring-[#2E7D32]" : ""
+            }`}
+          >
+            {loc}
+          </button>
+        ))}
+      </div>
+
+      {seleccionado && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mt-8 w-full max-w-2xl"
+        >
+          <Card className="bg-white rounded-2xl shadow-lg p-4">
+            <CardContent>
+              <h2 className="text-xl font-bold text-[#2E7D32] mb-2">
+                Lugares recomendados en {seleccionado}:
+              </h2>
+              <ul className="list-disc ml-6 text-gray-800">
+                {RECOMENDACIONES[seleccionado]?.map((lugar, idx) => (
+                  <li key={idx}>{lugar}</li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        </motion.div>
+      )}
+    </div>
+  );
+}

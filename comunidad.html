@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comunidad - Emerald</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #f5fdf6;
+      color: #2f4f4f;
+    }
+
+    header {
+      background-color: #74c69d;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+      border-bottom: 3px solid #52b788;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .form-section {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .form-section input[type="file"], .form-section input[type="text"] {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .form-section button {
+      background-color: #40916c;
+      color: white;
+      padding: 0.7rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .form-section button:hover {
+      background-color: #2d6a4f;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .photo-card {
+      background-color: #e9f5ec;
+      border: 1px solid #b7e4c7;
+      border-radius: 10px;
+      padding: 0.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .photo-card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .description {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      text-align: center;
+      color: #344e41;
+    }
+.circulo {
+width: 80px;
+height: 80px;
+border-radius: 50%;
+border: 10px solid whitesomoke;
+}
+
+  </style>
+</head>
+<body>
+<img src="img/logo.png" width="70" height="60" class="circulo" >
+  <header>Tu Comunidad de Recuerdos</header>
+  <div class="container">
+    <section class="form-section">
+      <input type="file" id="photoInput" accept="image/*">
+      <input type="text" id="descriptionInput" placeholder="Describe este recuerdo...">
+      <button onclick="addPhoto()">Agregar Recuerdo</button>
+    </section>
+    <div id="gallery" class="gallery"></div>
+  </div>
+
+  <script>
+    function addPhoto() {
+      const photoInput = document.getElementById('photoInput');
+      const descriptionInput = document.getElementById('descriptionInput');
+
+      if (photoInput.files.length === 0 || descriptionInput.value.trim() === "") {
+        alert("Por favor selecciona una foto y escribe una descripción.");
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const photoCard = document.createElement('div');
+        photoCard.className = 'photo-card';
+
+        const img = document.createElement('img');
+        img.src = e.target.result;
+
+        const desc = document.createElement('div');
+        desc.className = 'description';
+        desc.innerText = descriptionInput.value;
+
+        photoCard.appendChild(img);
+        photoCard.appendChild(desc);
+
+        document.getElementById('gallery').appendChild(photoCard);
+
+        photoInput.value = "";
+        descriptionInput.value = "";
+      }
+
+      reader.readAsDataURL(photoInput.files[0]);
+    }
+  </script>
+</body>
+</html>

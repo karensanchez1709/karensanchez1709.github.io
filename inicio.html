@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pantalla Emerald para Mascotas</title>
+  <style>
+    /* Paleta de Colores Emerald */
+    :root {
+      --verde-principal: #2d6a4f;
+      --verde-secundario: #40916c;
+      --gris-claro: #f1f5f9;
+      --blanco: #ffffff;
+      --azul-acento: #4f91c2;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--gris-claro);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 1200px;
+      background-color: var(--blanco);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .section {
+      background-color: var(--verde-secundario);
+      padding: 20px;
+      border-radius: 10px;
+      color: var(--blanco);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .section h2 {
+      margin-top: 0;
+      color: var(--blanco);
+    }
+
+    .section p {
+      color: var(--gris-claro);
+    }
+
+    .icon {
+      font-size: 2em;
+      color: var(--blanco);
+      margin-right: 10px;
+    }
+
+    .photo-upload {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      background-color: var(--verde-principal);
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .photo-upload input {
+      display: none;
+    }
+
+    .photo-upload label {
+      font-size: 1.2em;
+      color: var(--blanco);
+    }
+
+    .photo-upload label:hover {
+      color: var(--azul-acento);
+    }
+
+    .checklist {
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    .checklist input {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sección de Checklist -->
+    <div class="section">
+      <h2>Checklist</h2>
+      <div class="checklist">
+        <label><input type="checkbox"> Vacunación al día</label><br>
+        <label><input type="checkbox"> Comida favorita</label><br>
+        <label><input type="checkbox"> Visita al veterinario</label><br>
+        <label><input type="checkbox"> Juguetes</label><br>
+      </div>
+    </div>
+
+    <!-- Sección de Peluquería -->
+    <div class="section">
+      <h2>Peluquería</h2>
+      <p>Servicios de peluquería para tu mascota.</p>
+      <p>¡Deja a tu mascota como nueva!</p>
+    </div>
+
+    <!-- Sección de Veterinarias -->
+    <div class="section">
+      <h2>Veterinarias</h2>
+      <p>Encuentra las mejores veterinarias cercanas.</p>
+    </div>
+
+    <!-- Sección de Nutrición -->
+    <div class="section">
+      <h2>Nutrición</h2>
+      <p>Recomendaciones de alimentación para tu mascota.</p>
+    </div>
+
+    <!-- Sección Pet Friendly -->
+    <div class="section">
+      <h2>Pet Friendly</h2>
+      <p>Lugares amigables para mascotas en tu ciudad.</p>
+    </div>
+
+    <!-- Sección de Recuerdos de Galería -->
+    <div class="section">
+      <h2>Recuerdos de Galería</h2>
+      <p>Comparte los momentos más especiales con tu mascota.</p>
+    </div>
+  </div>
+
+  <!-- Opción de subir foto de mascota -->
+  <div class="photo-upload">
+    <input type="file" id="photo" accept="image/*">
+    <label for="photo">Elige una foto de tu mascota</label>
+  </div>
+
+  <script>
+    // Aquí puedes agregar cualquier lógica JavaScript para interactuar con las secciones si lo deseas.
+  </script>
+</body>
+</html>

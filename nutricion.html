@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutrición | Emerald App</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4fdfc;
+      color: #20312b;
+    }
+    h2 {
+      padding: 1rem;
+      background-color: #b7eadb;
+      margin: 0;
+    }
+    .scroll-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding: 1rem;
+      scroll-snap-type: x mandatory;
+    }
+    .card {
+      min-width: 200px;
+      background-color: #ffffff;
+      border-radius: 16px;
+      padding: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+      scroll-snap-align: start;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .details {
+      display: none;
+      padding: 1rem;
+      background-color: #e1f7f0;
+      border-top: 3px solid #4ec3a3;
+    }
+    .details.active {
+      display: block;
+    }
+.circulo {
+width: 80px;
+height: 80px;
+border-radius: 50%;
+border: 10px solid whitesomoke;
+}
+  </style>
+</head>
+<body>
+<img src="img/logo.png" width="70" height="60" class="circulo" >
+  <h2>🍖 Alimentación Industrial</h2>
+  <div class="scroll-container" id="industrial-bar">
+    <div class="card" onclick="showDetails('dog-chow')">Dog Chow</div>
+    <div class="card" onclick="showDetails('pro-plan')">Pro Plan</div>
+    <div class="card" onclick="showDetails('taste-wild')">Taste of the Wild</div>
+    <div class="card" onclick="showDetails('hill-science')">Hill's Science Diet</div>
+    <div class="card" onclick="showDetails('eukanuba')">Eukanuba</div>
+    <!-- Puedes seguir añadiendo más -->
+  </div>
+
+  <div class="details" id="dog-chow">
+    <strong>Dog Chow</strong><br>
+    - Tamaños: Pequeño, mediano y grande<br>
+    - Beneficios: Nutrición completa y balanceada, con prebióticos naturales.<br>
+    - Recomendado para: Todas las razas, ideal para mantenimiento diario.
+  </div>
+  <div class="details" id="pro-plan">
+    <strong>Pro Plan</strong><br>
+    - Contiene OptiHealth, fórmula con antioxidantes y prebióticos.<br>
+    - Específico para edad, tamaño y sensibilidad digestiva.<br>
+    - Alta calidad y proteína animal.
+  </div>
+  <div class="details" id="taste-wild">
+    <strong>Taste of the Wild</strong><br>
+    - Ingredientes: carne de búfalo, venado o salmón<br>
+    - Beneficios: sin cereales, alto en proteína, ideal para razas activas.<br>
+    - Ideal para: Perros con alergias o sensibilidad al gluten.
+  </div>
+  <div class="details" id="hill-science">
+    <strong>Hill's Science Diet</strong><br>
+    - Enfocada en problemas médicos (digestión, articulaciones, peso).<br>
+    - Fórmulas especiales según necesidad veterinaria.
+  </div>
+  <div class="details" id="eukanuba">
+    <strong>Eukanuba</strong><br>
+    - Beneficios: Mejora condición física, sistema inmune y pelaje.<br>
+    - Alto contenido de DHA para desarrollo cerebral en cachorros.
+  </div>
+
+  <h2>🥕 Alimentación Natural</h2>
+  <div class="scroll-container" id="natural-bar">
+    <div class="card" onclick="showDetails('pollo-verduras')">Guiso de Pollo</div>
+    <div class="card" onclick="showDetails('pavo-batata')">Puré de Pavo</div>
+    <div class="card" onclick="showDetails('albondigas-carne')">Albóndigas</div>
+    <div class="card" onclick="showDetails('revuelto-huevo')">Revuelto Huevo</div>
+    <div class="card" onclick="showDetails('sardinas-arroz')">Sardinas y Arroz</div>
+  </div>
+
+  <div class="details" id="pollo-verduras">
+    <strong>Guiso de Pollo con Verduras</strong><br>
+    - Ideal para digestión y estómagos sensibles.<br>
+    - Ingredientes: Pollo, zanahoria, calabaza, guisantes, arroz.<br>
+    - Porciones: ½ taza (pequeños), 1 taza (medianos), 2 tazas (grandes).
+  </div>
+  <div class="details" id="pavo-batata">
+    <strong>Puré de Pavo y Batata</strong><br>
+    - Rico en antioxidantes y bajo en grasa.<br>
+    - Ingredientes: Pavo, batata, espinacas, cúrcuma.<br>
+    - Ideal para: Articulaciones, perros mayores, post-cirugía.
+  </div>
+  <div class="details" id="albondigas-carne">
+    <strong>Albóndigas de Carne y Avena</strong><br>
+    - Energéticas, fáciles de almacenar.<br>
+    - Ingredientes: Carne magra, avena, huevo, perejil.<br>
+    - Perfectas como snack saludable.
+  </div>
+  <div class="details" id="revuelto-huevo">
+    <strong>Revuelto de Huevo con Vegetales</strong><br>
+    - Desayuno ideal para perros con bajo apetito.<br>
+    - Ingredientes: Huevo, espinaca, calabacín, pimiento rojo.
+  </div>
+  <div class="details" id="sardinas-arroz">
+    <strong>Sardinas con Arroz</strong><br>
+    - Alta en Omega-3, fortalece sistema inmune.<br>
+    - Ingredientes: Sardinas, arroz blanco, zanahoria, aceite de oliva.<br>
+    - Especial para perros con problemas de piel o pelo.
+  </div>
+
+  <script>
+    function showDetails(id) {
+      const details = document.querySelectorAll('.details');
+      details.forEach(d => d.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Peluquerías Caninas en Bogotá</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0fff0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #b8e4c9;
+            padding: 20px;
+            text-align: center;
+            color: #2b4c3f;
+        }
+        .container {
+            padding: 20px;
+        }
+        .filters {
+            margin-bottom: 20px;
+            background-color: #dff5e3;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .filters label {
+            margin-right: 10px;
+        }
+        .card {
+            background-color: #ffffff;
+            border: 2px solid #c0e8d5;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 15px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #2f6f4e;
+        }
+        .card p {
+            margin: 5px 0;
+        }
+        .hidden {
+            display: none;
+        }
+.circulo {
+width: 80px;
+height: 80px;
+border-radius: 50%;
+border: 10px solid whitesomoke;
+}
+    </style>
+</head>
+<body>
+<img src="img/logo.png" width="70" height="60" class="circulo" >
+<header>
+    <h1>🐶 Peluquerías Caninas en Bogotá</h1>
+    <p>Filtra por servicios para encontrar la mejor opción para tu peludo</p>
+</header>
+
+<div class="container">
+    <div class="filters">
+        <strong>Filtrar por servicios:</strong><br>
+        <label><input type="checkbox" value="spa" onchange="filterCards()"> Spa</label>
+        <label><input type="checkbox" value="uñas" onchange="filterCards()"> Corte de uñas</label>
+        <label><input type="checkbox" value="pelo" onchange="filterCards()"> Corte de pelo</label>
+        <label><input type="checkbox" value="baño" onchange="filterCards()"> Baño</label>
+        <label><input type="checkbox" value="masaje" onchange="filterCards()"> Masaje</label>
+        <label><input type="checkbox" value="aroma" onchange="filterCards()"> Aromaterapia</label>
+    </div>
+
+    <!-- Tarjeta 1 -->
+    <div class="card" data-servicios="spa uñas pelo baño">
+        <h3>✨ Pet Spa Bogotá</h3>
+        <p>📍 Dirección: Calle 122 #18-58, Usaquén</p>
+        <p>📞 Tel: 310 123 4567</p>
+        <p>🌐 <a href="https://petspabogota.com" target="_blank">petspabogota.com</a></p>
+        <p>🛁 Servicios: Spa, Corte de uñas, Corte de pelo, Baño</p>
+        <p>⭐ Especialidad: Spa relajante con aromaterapia para perros ansiosos</p>
+    </div>
+
+    <!-- Tarjeta 2 -->
+    <div class="card" data-servicios="pelo baño uñas">
+        <h3>✂️ PeluCaninos</h3>
+        <p>📍 Dirección: Cra. 15 #85-32, Chapinero</p>
+        <p>📞 Tel: 320 456 7890</p>
+        <p>🌐 <a href="https://pelucaninos.com" target="_blank">pelucaninos.com</a></p>
+        <p>🛁 Servicios: Corte de pelo, Baño, Corte de uñas</p>
+        <p>⭐ Especialidad: Estilos modernos y corte según raza</p>
+    </div>
+
+    <!-- Tarjeta 3 -->
+    <div class="card" data-servicios="spa aroma masaje">
+        <h3>🌿 Canino Zen</h3>
+        <p>📍 Dirección: Av. Suba #105-78, Suba</p>
+        <p>📞 Tel: 301 234 5678</p>
+        <p>🌐 <a href="https://caninozen.com" target="_blank">caninozen.com</a></p>
+        <p>🛁 Servicios: Spa, Aromaterapia, Masaje canino</p>
+        <p>⭐ Especialidad: Terapias de relajación para perros con estrés</p>
+    </div>
+
+    <!-- Tarjeta 4 -->
+    <div class="card" data-servicios="baño uñas pelo">
+        <h3>🐾 HappyPaws Grooming</h3>
+        <p>📍 Dirección: Calle 140 #20-19, Cedritos</p>
+        <p>📞 Tel: 313 456 7890</p>
+        <p>🌐 <a href="https://happypaws.com.co" target="_blank">happypaws.com.co</a></p>
+        <p>🛁 Servicios: Baño, Corte de uñas, Corte de pelo</p>
+        <p>⭐ Especialidad: Atención personalizada y manejo con refuerzo positivo</p>
+    </div>
+
+    <!-- Tarjeta 5 -->
+    <div class="card" data-servicios="baño uñas pelo">
+        <h3>✂️ Doggy Style Bogotá</h3>
+        <p>📍 Dirección: Calle 93 #14-10, Chicó</p>
+        <p>📞 Tel: 311 789 4567</p>
+        <p>🌐 <a href="https://doggystylebogota.com" target="_blank">doggystylebogota.com</a></p>
+        <p>🛁 Servicios: Baño, Corte de uñas, Corte de pelo</p>
+        <p>⭐ Especialidad: Cortes de exhibición y estilo boutique</p>
+    </div>
+
+    <!-- Tarjeta 6 -->
+    <div class="card" data-servicios="spa masaje baño">
+        <h3>🌸 Pet Relax Spa</h3>
+        <p>📍 Dirección: Calle 45 #28-15, Teusaquillo</p>
+        <p>📞 Tel: 312 987 6543</p>
+        <p>🌐 <a href="https://petrelaxspa.com" target="_blank">petrelaxspa.com</a></p>
+        <p>🛁 Servicios: Spa, Masaje, Baño</p>
+        <p>⭐ Especialidad: Tratamientos antiestrés y aceites esenciales naturales</p>
+    </div>
+
+    <!-- Tarjeta 7 -->
+    <div class="card" data-servicios="baño pelo">
+        <h3>🐕 La Guau Spa</h3>
+        <p>📍 Dirección: Cra. 30 #75-60, Barrios Unidos</p>
+        <p>📞 Tel: 313 555 1234</p>
+        <p>🌐 <a href="https://laguauspa.com" target="_blank">laguauspa.com</a></p>
+        <p>🛁 Servicios: Baño, Corte de pelo</p>
+        <p>⭐ Especialidad: Baños hipoalergénicos para piel sensible</p>
+    </div>
+
+    <!-- Tarjeta 8 -->
+    <div class="card" data-servicios="pelo uñas">
+        <h3>✂️ Estética Canina Patitas</h3>
+        <p>📍 Dirección: Calle 72 #24-37, Engativá</p>
+        <p>📞 Tel: 310 222 7890</p>
+        <p>🌐 <a href="https://patitascaninas.com" target="_blank">patitascaninas.com</a></p>
+        <p>🛁 Servicios: Corte de pelo, Corte de uñas</p>
+        <p>⭐ Especialidad: Estilismo para perros pequeños y razas toy</p>
+    </div>
+
+    <!-- Script de Filtro -->
+    <script>
+        function filterCards() {
+            const checkboxes = document.querySelectorAll(".filters input[type=checkbox]");
+            const activeFilters = Array.from(checkboxes)
+                .filter(chk => chk.checked)
+                .map(chk => chk.value);
+            
+            const cards = document.querySelectorAll(".card");
+            
+            cards.forEach(card => {
+                const servicios = card.getAttribute("data-servicios").split(" ");
+                const show = activeFilters.every(filtro => servicios.includes(filtro));
+                card.style.display = show || activeFilters.length === 0 ? "block" : "none";
+            });
+        }
+    </script>
+
+</div> <!-- container -->
+</body>
+</html>

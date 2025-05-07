@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínicas Veterinarias de Urgencias en Bogotá</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8f8e8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: #d4f1d4;
+            border: 1px solid #a3e0a3;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.2s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        h2 {
+            color: #006400;
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        h3 {
+            color: #2e8b57;
+        }
+        p {
+            font-size: 16px;
+        }
+        a {
+            color: #006400;
+        }
+        .filters {
+            margin-bottom: 20px;
+        }
+        .filters input {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Clínicas Veterinarias de Urgencias en Bogotá</h2>
+
+    <div class="filters">
+        <h4>Filtrar por Servicios:</h4>
+        <label><input type="checkbox" value="24/7" onclick="filterCards()"> Atención 24/7</label>
+        <label><input type="checkbox" value="urgencias" onclick="filterCards()"> Urgencias</label>
+    </div>
+
+    <!-- Tarjeta 1 -->
+    <div class="card" data-servicios="24/7 urgencias">
+        <h3>🐾 Movet Usaquén</h3>
+        <p>📍 Dirección: Calle 134 #17-68, Usaquén</p>
+        <p>📞 Tel: 601 5282398</p>
+        <p>🌐 <a href="https://www.movet.co/servicios/urgencias-24-horas" target="_blank">movet.co</a></p>
+        <p>🕒 Atención 24/7</p>
+        <p>⭐ Especialidad: Atención de urgencias caninas y felinas</p>
+    </div>
+
+    <!-- Tarjeta 2 -->
+    <div class="card" data-servicios="24/7 urgencias">
+        <h3>🐾 CPA Cedritos</h3>
+        <p>📍 Dirección: Cra. 12b No. 137 – 65, Usaquén</p>
+        <p>📞 Tel: 601 7037309</p>
+        <p>🌐 <a href="https://clinicaprotectoradeanimales.co/" target="_blank">clinicaprotectoradeanimales.co</a></p>
+        <p>🕒 Atención 24/7</p>
+        <p>⭐ Especialidad: Urgencias veterinarias y cuidado intensivo</p>
+    </div>
+    <!-- Tarjeta 3 -->
+    <div class="card" data-servicios="24/7 urgencias">
+        <h3>🐾 Movet Chapinero</h3>
+        <p>📍 Dirección: Calle 53 # 50-09, Chapinero</p>
+        <p>📞 Tel: 601 5719974</p>
+        <p>🌐 <a href="https://www.movet.co/servicios/urgencias-24-horas" target="_blank">movet.co</a></p>
+        <p>🕒 Atención 24/7</p>
+        <p>⭐ Especialidad: Urgencias médicas y quirúrgicas</p>
+    </div>
+
+    <!-- Tarjeta 4 -->
+    <div class="card" data-servicios="24/7 urgencias">
+        <h3>🐾 Clínica Raza Sede Santafé</h3>
+        <p>📍 Dirección: Cl. 183 #45-03, Santa Fe</p>
+        <p>📞 Tel: 601 3788122</p>
+        <p>🌐 <a href="https://www.clinicaraza.com/" target="_blank">clinicaraza.com</a></p>
+        <p>🕒 Atención 24/7</p>
+        <p>⭐ Especialidad: Urgencias médicas, hospitalización y cirugía</p>
+    </div>
+
+    <!-- Tarjeta 5 -->
+    <div class="card" data-servicios="24/7 urgencias">
+        <h3>🐾 IDPYBA Servicio Gratuito (San Cristóbal)</h3>
+        <p>📍 Dirección: San Cristóbal</p>
+        <p>📞 Tel: 123</p>
+        <p>🌐 <a href="https://bogota.gov.co/mi-ciudad/ambiente/urgencias-veterinarias-de-idpyba" target="_blank">bogota.gov.co</a></p>
+        <p>🕒 Atención 24/7</p>
+        <p>⭐ Especialidad: Urgencias veterinarias gratuitas</p>
+    </div>
+
+    <!-- Tarjeta 6 -->
+    <div class="card" data-servicios="24/7 urgencias">
+        <h3>🐾 IDPYBA Servicio Gratuito (Usme)</h3>
+        <p>📍 Dirección: Usme</p>
+        <p>📞 Tel: 123</p>
+        <p>🌐 <a href="https://bogota.gov.co/mi-ciudad/ambiente/urgencias-veterinarias-de-idpyba" target="_blank">bogota.gov.co</a></p>
+        <p>🕒 Atención 24/7</p>
+        <p>⭐ Especialidad: Urgencias veterinarias gratuitas</p>
+    </div>
+
+    <!-- Tarjeta 7 -->
+    <div class="card" data-servicios="24/7 urgencias">
+        <h3>🐾 IDPYBA Servicio Gratuito (Tunjuelito)</h3>
+        <p>📍 Dirección: Tunjuelito</p>
+        <p>📞 Tel: 123</p>
+        <p>🌐 <a href="https://bogota.gov.co/mi-ciudad/ambiente/urgencias-veterinarias-de-idpyba" target="_blank">bogota.gov.co</a></p>
+        <p>🕒 Atención 24/7</p>
+        <p>⭐ Especialidad: Urgencias veterinarias gratuitas</p>
+    </div>
+
+    <!-- Tarjeta 8 -->
+    <div class="card" data-servicios="24/7 urgencias">
+        <h3>🐾 IDPYBA Servicio Gratuito (Bosa)</h3>
+        <p>📍 Dirección: Bosa</p>
+        <p>📞 Tel: 123</p>
+        <p>🌐 <a href="https://bogota.gov.co/mi-ciudad/ambiente/urgencias-veterinarias-de-idpyba" target="_blank">bogota.gov.co</a></p>
+        <p>🕒 Atención 24/7</p>
+        <p>⭐ Especialidad: Urgencias veterinarias gratuitas</p>
+    </div>
+
+    <!-- Tarjeta 9 -->
+    <div class="card" data-servicios="24/7 urgencias">
+        <h3>🐾 Movet Kennedy</h3>
+        <p>📍 Dirección: Av. Boyacá #7c-77, Kennedy</p>
+        <p>📞 Tel: 601 5169500</p>
+        <p>🌐 <a href="https://www.movet.co/servicios/urgencias-24-horas" target="_blank">movet.co</a></p>
+        <p>🕒 Atención 24/7</p>
+        <p>⭐ Especialidad: Urgencias médicas y quirúrgicas</p>
+    </div>
+
+    <!-- Tarjeta 10 -->
+    <div class="card" data-servicios="24/7 urgencias">
+        <h3>🐾 Movet Fontibón</h3>
+        <p>📍 Dirección: Calle 26 # 96J-66, Fontibón</p>
+        <p>📞 Tel: 601 5719974</p>
+        <p>🌐 <a href="https://www.movet.co/servicios/urgencias-24-horas" target="_blank">movet.co</a></p>
+        <p>🕒 Atención 24/7</p>
+        <p>⭐ Especialidad: Urgencias médicas y hospitalización</p>
+    </div>
+    <!-- Tarjeta 11 -->
+    <div class="card" data-servicios="24/7 urgencias">
+        <h3>🐾 Movet Engativá</h3>
+        <p>📍 Dirección: Calle 80 # 83-40, Engativá</p>
+        <p>📞 Tel: 601 8078922</p>
+        <p>🌐 <a href="https://www.movet.co/servicios/urgencias-24-horas" target="_blank">movet.co</a></p>
+        <p>🕒 Atención 24/7</p>
+        <p>⭐ Especialidad: Urgencias médicas y quirúrgicas</p>
+    </div>
+
+    <!-- Tarjeta 12 -->
+    <div class="card" data-servicios="24/7 urgencias">
+        <h3>🐾 Movet Suba</h3>
+        <p>📍 Dirección: Calle 147 # 19-50, Suba</p>
+        <p>📞 Tel: 601 7462028</p>
+        <p>🌐 <a href="https://www.movet.co/servicios/urgencias-24-horas" target="_blank">movet.co</a></p>
+        <p>🕒 Atención 24/7</p>
+        <p>⭐ Especialidad: Urgencias médicas y hospitalización</p>
+    </div>
+
+    <!-- Tarjeta 13 -->
+    <div class="card" data-servicios="24/7 urgencias">
+        <h3>🐾 CPA Sede Teusaquillo</h3>
+        <p>📍 Dirección: Av. Cra. 19 No. 29 – 67, Barrios Unidos</p>
+        <p>📞 Tel: 601 2325126</p>
+        <p>🌐 <a href="https://clinicaprotectoradeanimales.co/" target="_blank">clinicaprotectoradeanimales.co</a></p>
+        <p>🕒 Atención 24/7</p>
+        <p>⭐ Especialidad: Urgencias médicas, hospitalización y cirugía</p>
+    </div>
+
+    <!-- Tarjeta 14 -->
+    <div class="card" data-servicios="24/7 urgencias">
+        <h3>🐾 Clínica Raza Sede Santa Isabel</h3>
+        <p>📍 Dirección: Carrera 27 #1g - 94, Antonio Nariño</p>
+        <p>📞 Tel: 601 3788122</p>
+        <p>🌐 <a href="https://www.clinicaraza.com/" target="_blank">clinicaraza.com</a></p>
+        <p>🕒 Atención 24/7</p>
+        <p>⭐ Especialidad: Urgencias médicas y quirúrgicas</p>
+    </div>
+
+    <!-- Tarjeta 15 -->
+    <div class="card" data-servicios="24/7 urgencias">
+        <h3>🐾 Clínica Raza Sede Ciudad Montes</h3>
+        <p>📍 Dirección: Calle 8 sur #38a - 03, Puente Aranda</p>
+        <p>📞 Tel: 601 3788122</p>
+        <p>🌐 <a href="https://www.clinicaraza.com/" target="_blank">clinicaraza.com</a></p>
+        <p>🕒 Atención 24/7</p>
+        <p>⭐ Especialidad: Urgencias médicas y quirúrgicas</p>
+    </div>
+
+    <!-- Tarjeta 16 -->
+    <div class="card" data-servicios="24/7 urgencias">
+        <h3>🐾 IDPYBA Servicio Gratuito (La Candelaria)</h3>
+        <p>📍 Dirección: La Candelaria</p>
+        <p>📞 Tel: 123</p>
+        <p>🌐 <a href="https://bogota.gov.co/mi-ciudad/ambiente/urgencias-veterinarias-de-idpyba" target="_blank">bogota.gov.co</a></p>
+        <p>🕒 Atención 24/7</p>
+        <p>⭐ Especialidad: Urgencias veterinarias gratuitas</p>
+    </div>
+
+    <!-- Tarjeta 17 -->
+    <div class="card" data-servicios="24/7 urgencias">
+        <h3>🐾 IDPYBA Servicio Gratuito (Rafael Uribe Uribe)</h3>
+        <p>📍 Dirección: Rafael Uribe Uribe</p>
+        <p>📞 Tel: 123</p>
+        <p>🌐 <a href="https://bogota.gov.co/mi-ciudad/ambiente/urgencias-veterinarias-de-idpyba" target="_blank">bogota.gov.co</a></p>
+        <p>🕒 Atención 24/7</p>
+        <p>⭐ Especialidad: Urgencias veterinarias gratuitas</p>
+    </div>
+
+    <!-- Tarjeta 18 -->
+    <div class="card" data-servicios="24/7 urgencias">
+        <h3>🐾 IDPYBA Servicio Gratuito (Ciudad Bolívar)</h3>
+        <p>📍 Dirección: Ciudad Bolívar</p>
+        <p>📞 Tel: 123</p>
+        <p>🌐 <a href="https://bogota.gov.co/mi-ciudad/ambiente/urgencias-veterinarias-de-idpyba" target="_blank">bogota.gov.co</a></p>
+        <p>🕒 Atención 24/7</p>
+        <p>⭐ Especialidad: Urgencias veterinarias gratuitas</p>
+    </div>
+
+    <!-- Tarjeta 19 -->
+    <div class="card" data-servicios="24/7 urgencias">
+        <h3>🐾 IDPYBA Servicio Gratuito (Sumapaz)</h3>
+        <p>📍 Dirección: Sumapaz</p>
+        <p>📞 Tel: 123</p>
+        <p>🌐 <a href="https://bogota.gov.co/mi-ciudad/ambiente/urgencias-veterinarias-de-idpyba" target="_blank">bogota.gov.co</a></p>
+        <p>🕒 Atención 24/7</p>
+        <p>⭐ Especialidad: Urgencias veterinarias gratuitas</p>
+    </div>
+
+    <!-- Tarjeta 20 -->
+    <div class="card" data-servicios="24/7 urgencias">
+        <h3>🐾 Central de Urgencias Veterinarias</h3>
+        <p>📍 Dirección: Carrera 21 No. 1 - 25 Barrio Vergel, Los Mártires</p>
+        <p>📞 Tel: 310 250 3839 / 601 742 3686</p>
+        <p>🌐 <a href="https://centraldeurgenciasveterinarias.com.co/" target="_blank">centraldeurgenciasveterinarias.com.co</a></p>
+        <p>🕒 Atención 24/7</p>
+        <p>⭐ Especialidad: Urgencias médicas y quirúrgicas</p>
+    </div>
